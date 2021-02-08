@@ -48,6 +48,10 @@ async def on_message(message):
             print(pin.content)
             await make_file(pin)
             await message.channel.send(content = WAIFU_REPLY, file = discord.File('waifupoll.txt'))
+        command = '!headpat'
+        if  command in message.content.lower():
+            await message.reply('There there... Have a headpat ' + message.author.display_name)
+            
     #except Exception as e:
     #    print(e)
     #    exit(-1)
